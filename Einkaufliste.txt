@@ -1,4 +1,10 @@
 ﻿Butter
 Milch
+<<<<<<< HEAD
 Geschenke
 Dekorationen
+=======
+Dekorationen
+Geschenke
+Fotos
+>>>>>>> feature1

@@ -1,0 +1,3 @@
+﻿HEAD ist zeiger auf den aktueller Branch 
+
+Ein Branch ist eine Zeiger auf den letzter Commit 
