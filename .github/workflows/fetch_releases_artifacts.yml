@@ -28,12 +28,12 @@ jobs:
       - name: List of releases
         run: gh release list --repo danou22/cmake_template
         env:
-          GITHUB_TOKEN: ${{ secrets.CMAKE_TEMPLATE_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
       # Download repos artifacts
       - name: download releases artifacts
         run: gh release download --repo danou22/cmake_template test_package
         env:
-          GITHUB_TOKEN: ${{ secrets.CMAKE_TEMPLATE_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
       # Read download content
       - name: read downloaded artifacts
         run: ls
