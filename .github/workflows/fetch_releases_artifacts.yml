@@ -33,7 +33,7 @@ jobs:
       # Download repos artifacts
       - name: download releases artifacts
         #run: gh release download --repo danou22/cmake_template test_package
-        run: gh release download --repo danou22/cmake_template test_package
+        run: gh release download --repo cpp-best-practices/cmake_template test_package
         env:
           GITHUB_TOKEN: ${{ github.token }}
       # Read download content
