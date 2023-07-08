@@ -1,1 +1,24 @@
+name: Download Release dn_pico_example
 
+# Controls when the workflow will run
+on: push
+
+jobs:  
+  get_asset:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List Releases
+        run: gh release list --repo danou22/dn_pico-examples
+        env:
+          GITHUB_TOKEN: ${{ secrets.PIPELINE_TUTORIAL_TOKEN }}
+
+      - name: Fetch asset
+        run: gh release download --repo danou22/dn_pico-examples 0.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.PIPELINE_TUTORIAL_TOKEN }}
+
+      - name: See what we downloaded
+        run: ls
+
+      #- name: Inspect content
+      #  run: cat hello.txt
