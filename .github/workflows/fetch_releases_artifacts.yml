@@ -27,21 +27,24 @@ jobs:
       # List of repos
       - name: List of releases
         #run: gh release list --repo danou22/cmake_template 
-        #run: gh release list --repo cpp-best-practices/cmake_template
+        run: gh release list --repo cpp-best-practices/cmake_template
         #run: gh release list --repo danou22/dn_pico-examples
-        run: gh release list --repo dnoubibo/int-env
+        #run: gh release list --repo dnoubibo/int-env
         env:
           GITHUB_TOKEN: ${{ github.token }}
       # Download repos artifacts
       - name: download releases artifacts
         #run: gh release download --repo danou22/cmake_template test_package
-        #run: gh release download --repo cpp-best-practices/cmake_template test_package
+        run: gh release download --repo cpp-best-practices/cmake_template test_package
         #un: gh release download --repo danou22/dn_pico-examples v0.1.0
         env:
           GITHUB_TOKEN: ${{ github.token }}
       # Read download content
       - name: read downloaded artifacts
         run: ls
+      # Get downloaded content
+      - name: Get all downloaded artifacts
+        uses: actions/download-artifacts@v3
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
