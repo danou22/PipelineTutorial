@@ -43,7 +43,7 @@ jobs:
       - name: read downloaded artifacts
         run: ls -R
       # Get downloaded content
-      - name: Get all downloaded artifacts
+      #- name: Get all downloaded artifacts
         #uses: actions/download-artifact@v3
         #with:
           #name: myproject-0.0.1-24d07c1f-Darwin-Release-GNU-11.2.0.tar.bz2
