@@ -61,5 +61,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo extract zip file,
-          tar -xf myproject-0.0.1-24d07c1f-Windows-Release-MSVC-19.31.31104.0.zip
+          unzip myproject-0.0.1-24d07c1f-Windows-Release-MSVC-19.31.31104.0.zip
           ls -R
