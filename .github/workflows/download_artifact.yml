@@ -15,7 +15,7 @@ jobs:
       - name: Fetch asset
         run: gh run download danou22/bun -n "bun-test_version.zip" --dir latest_test 
         env:
-          GITHUB_TOKEN: ${{ secrets.GUTHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: See what we downloaded
         run: ls
