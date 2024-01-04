@@ -1,7 +1,11 @@
-name: Download Release dn_pico_example
+name: Download Release example
 
 # Controls when the workflow will run
-on: pull_request
+on: 
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:  
   get_asset:
