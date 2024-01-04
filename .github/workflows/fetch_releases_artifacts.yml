@@ -35,13 +35,15 @@ jobs:
       # Download repos artifacts
       - name: download releases artifacts
         #run: gh release download --repo danou22/cmake_template test_package
-        run: gh release download --repo cpp-best-practices/cmake_template test_package
+        run: gh release download --repo cpp-best-practices/cmake_template test_package --dir rel_package
         #un: gh release download --repo danou22/dn_pico-examples v0.1.0
         env:
           GITHUB_TOKEN: ${{ github.token }}
       # Read download content
       - name: read downloaded artifacts
-        run: ls -R
+        run: |
+            cd rel_package
+            ls -R
       # Get downloaded content
       #- name: Get all downloaded artifacts
         #uses: actions/download-artifact@v3
