@@ -18,7 +18,7 @@ jobs:
 
       - name: Fetch asset
         #run: gh run download ${{ github.run_id }} --repo danou22/bun --dir latest_test 
-        run: gh release download --repo danou22/bun test_version --dir rel_package
+        run: gh release download --repo danou22/bun test version --dir rel_package
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
