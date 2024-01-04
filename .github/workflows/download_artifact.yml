@@ -17,7 +17,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Fetch asset
-        run: gh run download --repo danou22/bun -n "Source code" --dir latest_test 
+        run: gh run download ${{ github.run_id }} --repo danou22/bun --dir latest_test 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
