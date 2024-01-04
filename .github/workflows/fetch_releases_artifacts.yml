@@ -46,8 +46,8 @@ jobs:
             ls -R
             #tar -xf myproject-0.0.1-24d07c1f-Windows-Release-MSVC-19.31.31104.0.zip
             #ls -R
-            cp myproject-0.0.1-24d07c1f-Windows-Release-MSVC-19.31.31104.0.zip ../
-            ls -R ../
+            cp myproject-0.0.1-24d07c1f-Windows-Release-MSVC-19.31.31104.0.zip ../baseline_ext
+            ls -R ../baseline_ext
       # Get downloaded content
       #- name: Get all downloaded artifacts
         #uses: actions/download-artifact@v3
